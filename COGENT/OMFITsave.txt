@@ -1,0 +1,197 @@
+['COGENT'] <-:-:-> OMFITmodule <-:-:->  <-:-:-> 
+['COGENT']['SCRIPTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['COGENT']['SCRIPTS']['runCOGENT'] <-:-:-> OMFITpythonTask <-:-:-> ./COGENT/SCRIPTS/runCOGENT.py <-:-:-> {}
+['COGENT']['SCRIPTS']['runHypnotoad'] <-:-:-> OMFITpythonTask <-:-:-> ./COGENT/SCRIPTS/runHypnotoad.py <-:-:-> {}
+['COGENT']['SCRIPTS']['run_cogent_grid'] <-:-:-> OMFITpythonTask <-:-:-> ./COGENT/SCRIPTS/run_cogent_grid.py <-:-:-> {}
+['COGENT']['SCRIPTS']['runHello'] <-:-:-> OMFITpythonTask <-:-:-> ./COGENT/SCRIPTS/runHello.py <-:-:-> {}
+['COGENT']['SCRIPTS']['HelloPBS'] <-:-:-> OMFITascii <-:-:-> ./COGENT/SCRIPTS/hello.pbs <-:-:-> {}
+['COGENT']['SCRIPTS']['COGENTPBS'] <-:-:-> OMFITascii <-:-:-> ./COGENT/SCRIPTS/COGENT.pbs <-:-:-> {}
+['COGENT']['SCRIPTS']['test_mod_orig'] <-:-:-> OMFITpythonTask <-:-:-> ./COGENT/SCRIPTS/TMO.py <-:-:-> {}
+['COGENT']['PLOTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['COGENT']['GUIS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['COGENT']['GUIS']['mainGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./COGENT/GUIS/mainGUI.py <-:-:-> {}
+['COGENT']['GUIS']['mainGUI_filepicker'] <-:-:-> OMFITpythonGUI <-:-:-> ./COGENT/GUIS/mainGUI.py_2_2307419014878564856/mainGUI.py <-:-:-> {}
+['COGENT']['GUIS']['mainGUItabbed'] <-:-:-> OMFITpythonGUI <-:-:-> ./COGENT/GUIS/mainGUI.py_3_2307419014878564857/mainGUI.py <-:-:-> {}
+['COGENT']['SETTINGS'] <-:-:-> OMFITnamelist <-:-:-> ./COGENT/SettingsNamelist.txt <-:-:-> {}
+['COGENT']['SETTINGS']['SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,'')" <-:-:-> 
+['COGENT']['SETTINGS']['EXPERIMENT']['shot'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['shot']" <-:-:-> 
+['COGENT']['SETTINGS']['EXPERIMENT']['time'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['time']" <-:-:-> 
+['COGENT']['SETTINGS']['EXPERIMENT']['device'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['device']" <-:-:-> 
+['COGENT']['SETTINGS']['EXPERIMENT']['shots'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['shots']" <-:-:-> 
+['COGENT']['SETTINGS']['EXPERIMENT']['times'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['times']" <-:-:-> 
+['COGENT']['SETTINGS']['EXPERIMENT']['runid'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['runid']" <-:-:-> 
+['COGENT']['SETTINGS']['EXPERIMENT']['run_tag'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['run_tag']" <-:-:-> 
+['COGENT']['SETTINGS']['REMOTE_SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,parent['serverPicker'])" <-:-:-> 
+['COGENT']['SETTINGS']['REMOTE_SETUP']['server'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['server']" <-:-:-> 
+['COGENT']['SETTINGS']['REMOTE_SETUP']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['tunnel']" <-:-:-> 
+['COGENT']['MACHINES'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['COGENT']['MACHINES']['edison'] <-:-:-> OMFITini <-:-:-> ./COGENT/MACHINES/edison.conf <-:-:-> {}
+['COGENT']['MACHINES']['edison']['job_status'] <-:-:-> OMFITexpression <-:-:-> _"OMFITwebLink('https:////my.nersc.gov/queues.php?machine=edison&full_name=Edison')" <-:-:-> 
+['COGENT']['MACHINES']['hopper'] <-:-:-> OMFITini <-:-:-> ./COGENT/MACHINES/hopper.conf <-:-:-> {}
+['COGENT']['MACHINES']['dummy'] <-:-:-> OMFITini <-:-:-> ./COGENT/MACHINES/dummy.ini <-:-:-> {}
+['COGENT']['FILES'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['COGENT']['FILES']['COGENT_parms'] <-:-:-> OMFITini <-:-:-> ./COGENT/FILES/gam_regression.in_my <-:-:-> {}
+['COGENT']['FILES']['G-EQDSK'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/g153523.03745 <-:-:-> {}
+['COGENT']['FILES']['COGENT_Coefficients'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/coefficients1 <-:-:-> {}
+['COGENT']['FILES']['nodal_COGENT_Coefficients'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/nodal_coefficients1 <-:-:-> {}
+['COGENT']['FILES']['grid'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/grid3 <-:-:-> {}
+['COGENT']['FILES']['nodal_grid'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/nodal_grid1 <-:-:-> {}
+['COGENT']['FILES']['fixed_nodal_grid'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/fixed_nodal_grid_1 <-:-:-> {}
+['COGENT']['FILES']['plot_files_dir'] <-:-:-> OMFITdir <-:-:-> ./COGENT/FILES/COGENT_PLOTS <-:-:-> {}
+['COGENT']['FILES']['help'] <-:-:-> OMFITascii <-:-:-> ./COGENT/FILES/help.txt <-:-:-> {}
+['EFIT'] <-:-:-> OMFITmodule <-:-:->  <-:-:-> 
+['EFIT']['FILES'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['EFIT']['SCRIPTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['EFIT']['SCRIPTS']['EFITexec'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/EFITexec.py <-:-:-> {}
+['EFIT']['SCRIPTS']['fromMDSplus'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/fromMDSplus.py <-:-:-> {}
+['EFIT']['SCRIPTS']['autoKnot'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/autoKnot.py <-:-:-> {}
+['EFIT']['SCRIPTS']['currentConstraint'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/currentConstraint.py <-:-:-> {}
+['EFIT']['SCRIPTS']['pressureConstraint'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/pressureConstraint.py <-:-:-> {}
+['EFIT']['SCRIPTS']['reset'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/resetEFIT.py <-:-:-> {}
+['EFIT']['SCRIPTS']['resetRfile'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/resetRfile.py <-:-:-> {}
+['EFIT']['SCRIPTS']['fetchSnap'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/fetchSnap.py <-:-:-> {}
+['EFIT']['SCRIPTS']['mseConstraint'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/mseConstraint.py <-:-:-> {}
+['EFIT']['SCRIPTS']['boundaryConstraint'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/boundaryConstraint.py <-:-:-> {}
+['EFIT']['SCRIPTS']['subsample'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/subsample.py <-:-:-> {}
+['EFIT']['SCRIPTS']['magneticConstraint'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/magneticConstraint.py <-:-:-> {}
+['EFIT']['SCRIPTS']['fetch_Osborne'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/fetch_Osborne.py <-:-:-> {}
+['EFIT']['SCRIPTS']['MSEerCorrection'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/MSEerCorrection.py <-:-:-> {}
+['EFIT']['SCRIPTS']['qConstraint'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/SCRIPTS/qConstraint.py <-:-:-> {}
+['EFIT']['TEMPLATES'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['EFIT']['TEMPLATES']['rfile'] <-:-:-> OMFITnamelist <-:-:-> ./EFIT/TEMPLATES/rfile.txt <-:-:-> {}
+['EFIT']['TEMPLATES']['rfile']['PROFILE_EXT']['GEQDSK_EXT'] <-:-:-> OMFITexpression <-:-:-> _"os.path.split(root['FILES']['gEQDSK'].filename)[1]" <-:-:-> 
+['EFIT']['TEMPLATES']['D3D_dprobe_112000'] <-:-:-> OMFITnamelist <-:-:-> ./EFIT/TEMPLATES/dprobe.dat <-:-:-> {}
+['EFIT']['TEMPLATES']['D3D_dprobe'] <-:-:-> OMFITnamelist <-:-:-> ./EFIT/TEMPLATES/dprobe.dat_2_5876717705588555252/dprobe.dat <-:-:-> {}
+['EFIT']['PLOTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['EFIT']['PLOTS']['chisquares'] <-:-:-> OMFITpythonPlot <-:-:-> ./EFIT/PLOTS/chisquares.py <-:-:-> {}
+['EFIT']['PLOTS']['colorDeltaProbes'] <-:-:-> OMFITpythonPlot <-:-:-> ./EFIT/PLOTS/colorDeltaProbes.py <-:-:-> {}
+['EFIT']['PLOTS']['compareErCER'] <-:-:-> OMFITpythonPlot <-:-:-> ./EFIT/PLOTS/compareErCER.py <-:-:-> {}
+['EFIT']['PLOTS']['MSEerror'] <-:-:-> OMFITpythonPlot <-:-:-> ./EFIT/PLOTS/MSEerror.py <-:-:-> {}
+['EFIT']['GUIS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['EFIT']['GUIS']['EFITgui'] <-:-:-> OMFITpythonGUI <-:-:-> ./EFIT/GUIS/EFITgui.py <-:-:-> {}
+['EFIT']['GUIS']['SNAPgui'] <-:-:-> OMFITpythonGUI <-:-:-> ./EFIT/GUIS/SNAPgui.py <-:-:-> {}
+['EFIT']['GUIS']['constraintsGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./EFIT/GUIS/constraintsGUI.py <-:-:-> {}
+['EFIT']['GUIS']['shiftGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./EFIT/GUIS/shiftGUI.py <-:-:-> {}
+['EFIT']['GUIS']['basisGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./EFIT/GUIS/basisGUI.py <-:-:-> {}
+['EFIT']['GUIS']['Osborne_profiles_GUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./EFIT/GUIS/Osborne_profiles_GUI.py <-:-:-> {}
+['EFIT']['IPS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['EFIT']['IPS']['config'] <-:-:-> OMFITini <-:-:-> ./EFIT/IPS/fastran_scenario.config <-:-:-> {}
+['EFIT']['IPS']['SCRIPTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['EFIT']['IPS']['SCRIPTS']['efit'] <-:-:-> OMFITpythonTask <-:-:-> ./EFIT/IPS/SCRIPTS/efit.py <-:-:-> {}
+['EFIT']['SETTINGS'] <-:-:-> OMFITnamelist <-:-:-> ./EFIT/SettingsNamelist.txt <-:-:-> {}
+['EFIT']['SETTINGS']['SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,'')" <-:-:-> 
+['EFIT']['SETTINGS']['SETUP']['executable'] <-:-:-> OMFITexpression <-:-:-> _u'if root[\'SETTINGS\'][\'PHYSICS\'][\'mode\']==2 and isinstance(root[\'SETTINGS\'][\'PHYSICS\'][\'mode\'],float):\n    executable="/link/efit/efitd90_110114"\nelif \'venus\' in str(root[\'SETTINGS\'][\'REMOTE_SETUP\'][\'server\']):\n    executable="/link/efit/efitd90_32.exe"\nelse:\n    executable="/link/efit/efitd90"\n\nexecutable="setenv LD_LIBRARY_PATH /c/source/PGI/pgi/linux86/10.8/lib:$LD_LIBRARY_PATH ; "+executable\n\nreturn_variable=executable.strip()+" "+str(root[\'SETTINGS\'][\'PHYSICS\'][\'grid_size\'])+\' \'+str(root[\'SETTINGS\'][\'PHYSICS\'][\'grid_size\'])' <-:-:-> 
+['EFIT']['SETTINGS']['EXPERIMENT']['shot'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['shot']" <-:-:-> 
+['EFIT']['SETTINGS']['EXPERIMENT']['time'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['time']" <-:-:-> 
+['EFIT']['SETTINGS']['EXPERIMENT']['device'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['device']" <-:-:-> 
+['EFIT']['SETTINGS']['EXPERIMENT']['runid'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['runid']" <-:-:-> 
+['EFIT']['SETTINGS']['EXPERIMENT']['shots'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['shots']" <-:-:-> 
+['EFIT']['SETTINGS']['EXPERIMENT']['times'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['times']" <-:-:-> 
+['EFIT']['SETTINGS']['EXPERIMENT']['run_tag'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['run_tag']" <-:-:-> 
+['EFIT']['SETTINGS']['REMOTE_SETUP']['serverPicker'] <-:-:-> OMFITexpression <-:-:-> _"\nif OMFITmodules[-2] is OMFIT:\n    return_variable='default'\nelse:\n    return_variable=OMFITmodules[-2]['SETTINGS']['REMOTE_SETUP']['serverPicker']\n" <-:-:-> 
+['EFIT']['SETTINGS']['REMOTE_SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,parent['serverPicker'])" <-:-:-> 
+['EFIT']['SETTINGS']['REMOTE_SETUP']['server'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['server']" <-:-:-> 
+['EFIT']['SETTINGS']['REMOTE_SETUP']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['tunnel']" <-:-:-> 
+['EFIT']['help'] <-:-:-> OMFITascii <-:-:-> ./EFIT/help.txt <-:-:-> {}
+['IPSworkflow'] <-:-:-> OMFITmodule <-:-:->  <-:-:-> 
+['IPSworkflow']['IPScore'] <-:-:-> OMFITmodule <-:-:->  <-:-:-> 
+['IPSworkflow']['IPScore']['MACHINES'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['IPSworkflow']['IPScore']['MACHINES']['venus'] <-:-:-> OMFITini <-:-:-> ./IPSworkflow/IPScore/MACHINES/venus.conf <-:-:-> {}
+['IPSworkflow']['IPScore']['MACHINES']['hopper'] <-:-:-> OMFITini <-:-:-> ./IPSworkflow/IPScore/MACHINES/hopper.conf <-:-:-> {}
+['IPSworkflow']['IPScore']['SCRIPTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['IPSworkflow']['IPScore']['SCRIPTS']['build_config'] <-:-:-> OMFITpythonTask <-:-:-> ./IPSworkflow/IPScore/SCRIPTS/build_config.py <-:-:-> {}
+['IPSworkflow']['IPScore']['SCRIPTS']['launch_job'] <-:-:-> OMFITpythonTask <-:-:-> ./IPSworkflow/IPScore/SCRIPTS/launch_job.py <-:-:-> {}
+['IPSworkflow']['IPScore']['SCRIPTS']['fetch_outputs'] <-:-:-> OMFITpythonTask <-:-:-> ./IPSworkflow/IPScore/SCRIPTS/fetch_outputs.py <-:-:-> {}
+['IPSworkflow']['IPScore']['GUIS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['IPSworkflow']['IPScore']['GUIS']['IPScoreGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./IPSworkflow/IPScore/GUIS/IPScoreGUI.py <-:-:-> {}
+['IPSworkflow']['IPScore']['GUIS']['IPScomponentsGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./IPSworkflow/IPScore/GUIS/IPScomponentsGUI.py <-:-:-> {}
+['IPSworkflow']['IPScore']['WEB_MONITOR'] <-:-:-> OMFITexpression <-:-:-> _"OMFITwebLink('swim.gat.com/showmyruns/?username='+MainSettings['SETUP']['user'])" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS'] <-:-:-> OMFITnamelist <-:-:-> ./IPSworkflow/IPScore/SettingsNamelist.txt <-:-:-> {}
+['IPSworkflow']['IPScore']['SETTINGS']['SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,'')" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['shot'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['shot']" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['time'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['time']" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['device'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['device']" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['shots'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['shots']" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['times'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['times']" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['runid'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['runid']" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['run_tag'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['run_tag']" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS']['REMOTE_SETUP']['serverPicker'] <-:-:-> OMFITexpression <-:-:-> _"\nif OMFITmodules[-2] is OMFIT:\n    return_variable='default'\nelse:\n    return_variable=OMFITmodules[-2]['SETTINGS']['REMOTE_SETUP']['serverPicker']\n" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS']['REMOTE_SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,parent['serverPicker'])" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS']['REMOTE_SETUP']['server'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['server']" <-:-:-> 
+['IPSworkflow']['IPScore']['SETTINGS']['REMOTE_SETUP']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['tunnel']" <-:-:-> 
+['IPSworkflow']['INPUTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['IPSworkflow']['OUTPUTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['IPSworkflow']['SCRIPTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['IPSworkflow']['SCRIPTS']['buildFromExistingRun'] <-:-:-> OMFITpythonTask <-:-:-> ./IPSworkflow/SCRIPTS/buildFromExistingRun.py <-:-:-> {}
+['IPSworkflow']['SCRIPTS']['reload_scripts'] <-:-:-> OMFITpythonTask <-:-:-> ./IPSworkflow/SCRIPTS/reload_scripts.py <-:-:-> {}
+['IPSworkflow']['PLOTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['IPSworkflow']['GUIS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['IPSworkflow']['GUIS']['workflowGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./IPSworkflow/GUIS/workflowGUI.py <-:-:-> {}
+['IPSworkflow']['GUIS']['buildFromExistingRunGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./IPSworkflow/GUIS/buildFromExistingRunGUI.py <-:-:-> {}
+['IPSworkflow']['COMPONENTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
+['IPSworkflow']['SETTINGS'] <-:-:-> OMFITnamelist <-:-:-> ./IPSworkflow/SettingsNamelist.txt <-:-:-> {}
+['IPSworkflow']['SETTINGS']['SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,'')" <-:-:-> 
+['IPSworkflow']['SETTINGS']['EXPERIMENT']['shot'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['shot']" <-:-:-> 
+['IPSworkflow']['SETTINGS']['EXPERIMENT']['time'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['time']" <-:-:-> 
+['IPSworkflow']['SETTINGS']['EXPERIMENT']['device'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['device']" <-:-:-> 
+['IPSworkflow']['SETTINGS']['EXPERIMENT']['shots'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['shots']" <-:-:-> 
+['IPSworkflow']['SETTINGS']['EXPERIMENT']['times'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['times']" <-:-:-> 
+['IPSworkflow']['SETTINGS']['EXPERIMENT']['runid'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['runid']" <-:-:-> 
+['IPSworkflow']['SETTINGS']['EXPERIMENT']['run_tag'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['run_tag']" <-:-:-> 
+['IPSworkflow']['SETTINGS']['REMOTE_SETUP']['serverPicker'] <-:-:-> OMFITexpression <-:-:-> _"\nif OMFITmodules[-2] is OMFIT:\n    return_variable='default'\nelse:\n    return_variable=OMFITmodules[-2]['SETTINGS']['REMOTE_SETUP']['serverPicker']\n" <-:-:-> 
+['IPSworkflow']['SETTINGS']['REMOTE_SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,parent['serverPicker'])" <-:-:-> 
+['IPSworkflow']['SETTINGS']['REMOTE_SETUP']['server'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['server']" <-:-:-> 
+['IPSworkflow']['SETTINGS']['REMOTE_SETUP']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['tunnel']" <-:-:-> 
+['IPSworkflow']['help'] <-:-:-> OMFITascii <-:-:-> ./IPSworkflow/help.txt <-:-:-> {}
+['MainSettings'] <-:-:-> OMFITmainSettings <-:-:-> ./MainSettingsNamelist.txt <-:-:-> {}
+['MainSettings']['SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITcwd+os.sep+'runs'+os.sep" <-:-:-> 
+['MainSettings']['SETUP']['modulesDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITsrc+'/../modules/'" <-:-:-> 
+['MainSettings']['SETUP']['projectsDir'] <-:-:-> OMFITexpression <-:-:-> _"if 'institutionProjectsDir' in parent:\n    return_variable=os.path.abspath(parent['institutionProjectsDir']+os.sep+os.environ['USER']+os.sep+'projects')+os.sep\nelse:\n    return_variable=os.path.abspath(os.environ['HOME']+os.sep+'OMFITdata'+os.sep+'projects')+os.sep" <-:-:-> 
+['MainSettings']['SERVER']['GA_username'] <-:-:-> OMFITexpression <-:-:-> _"os.environ['USER']" <-:-:-> 
+['MainSettings']['SERVER']['PPPL_username'] <-:-:-> OMFITexpression <-:-:-> _"os.environ['USER']" <-:-:-> 
+['MainSettings']['SERVER']['NERSC_username'] <-:-:-> OMFITexpression <-:-:-> _"os.environ['USER']" <-:-:-> 
+['MainSettings']['SERVER']['UCSD_username'] <-:-:-> OMFITexpression <-:-:-> _"os.environ['USER']" <-:-:-> 
+['MainSettings']['SERVER']['ITM_username'] <-:-:-> OMFITexpression <-:-:-> _"os.environ['USER']" <-:-:-> 
+['MainSettings']['SERVER']['MIT_username'] <-:-:-> OMFITexpression <-:-:-> _"os.environ['USER']" <-:-:-> 
+['MainSettings']['SERVER']['localhost']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITcwd+os.sep+'remote_runs'+os.sep" <-:-:-> 
+['MainSettings']['SERVER']['venus']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/scratch/'+username+'/OMFIT/runs/'" <-:-:-> 
+['MainSettings']['SERVER']['venus']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@venus.gat.com:22"' <-:-:-> 
+['MainSettings']['SERVER']['venus']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['lohan1']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/tmp/'+username+'/OMFIT/runs/'" <-:-:-> 
+['MainSettings']['SERVER']['lohan1']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@lohan1.gat.com:22"' <-:-:-> 
+['MainSettings']['SERVER']['lohan1']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['delphi2']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/tmp/'+username+'/OMFIT/runs/'" <-:-:-> 
+['MainSettings']['SERVER']['delphi2']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@delphi2.gat.com:22"' <-:-:-> 
+['MainSettings']['SERVER']['delphi2']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['drop']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/home/'+username+'/OMFIT/runs/'" <-:-:-> 
+['MainSettings']['SERVER']['drop']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@drop.gat.com:22"' <-:-:-> 
+['MainSettings']['SERVER']['drop']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['portal']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/local/'+username+'/OMFIT/runs/'" <-:-:-> 
+['MainSettings']['SERVER']['portal']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'PPPL_username\']+"@portal.pppl.gov:22"' <-:-:-> 
+['MainSettings']['SERVER']['portal']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['hopper']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/scratch/scratchdirs/'+username+'/OMFIT/runs/'" <-:-:-> 
+['MainSettings']['SERVER']['hopper']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'NERSC_username\']+"@hopper.nersc.gov:22"' <-:-:-> 
+['MainSettings']['SERVER']['hopper']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"''" <-:-:-> 
+['MainSettings']['SERVER']['edison']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/scratch1/scratchdirs/'+username+'/OMFIT/runs/'" <-:-:-> 
+['MainSettings']['SERVER']['edison']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'NERSC_username\']+"@edison.nersc.gov:22"' <-:-:-> 
+['MainSettings']['SERVER']['edison']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"''" <-:-:-> 
+['MainSettings']['SERVER']['tscc']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/tmp/'+username+'/OMFIT/runs/'" <-:-:-> 
+['MainSettings']['SERVER']['tscc']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'UCSD_username\']+"@tscc-login.sdsc.edu:22"' <-:-:-> 
+['MainSettings']['SERVER']['tscc']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"''" <-:-:-> 
+['MainSettings']['SERVER']['itm_gateway']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/tmp/'+username+'/OMFIT/runs/'" <-:-:-> 
+['MainSettings']['SERVER']['itm_gateway']['server'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['SERVER']['ITM_username']+'@g03.efda-itm.eu:22'" <-:-:-> 
+['MainSettings']['SERVER']['itm_gateway']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"''" <-:-:-> 
+['MainSettings']['SERVER']['atlas']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['alcdata']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['skylark']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['jet_mdsplus']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['mst_mdsplus']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['d3drdb']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['d3drdb']['RDB_server'] <-:-:-> OMFITexpression <-:-:-> _u'user=\'guest\'\npasswd=\'guest_pwd\'\nlogin_file=os.environ[\'HOME\']+os.sep+\'D3DRDB.sybase_login\'\nif os.path.exists(login_file):\n   user,passwd=map(lambda x:x.strip(),open(login_file,\'Ur\').readlines())\nreturn_variable=user+\':\'+passwd+\'@\'+"d3drdb.gat.com:8001"' <-:-:-> 
+['MainSettings']['SERVER']['idl'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['SERVER']['default']" <-:-:-> 
+['MainSettings']['SERVER']['matlab'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['SERVER']['default']" <-:-:-> 
+['MainSettings']['SERVER']['saturn']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/cscratch/'+username+'/OMFIT/runs/'" <-:-:-> 
+['MainSettings']['SERVER']['saturn']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@saturn.gat.com:22"' <-:-:-> 
+['MainSettings']['SERVER']['saturn']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['MainSettings']['SERVER']['transpgrid']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
+['__GUISAVE__'] <-:-:-> pickle <-:-:-> ./OMFITpickled_-2654929804091140573 <-:-:-> 

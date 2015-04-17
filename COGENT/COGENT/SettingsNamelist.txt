@@ -1,0 +1,31 @@
+ &PHYSICS
+ /
+ &SETUP
+ workDir = 
+ executable = '/global/project/projectdirs/atom/atom-install-edison/cogent/COGENT/exec/cogent.Linux.64.CC.ftn.OPT.MPI.ex'
+ hypnotoad_location = '/global/homes/c/creyn/code/Hypnotoad'
+ /
+ &EXPERIMENT
+ shot = 
+ time = 
+ device = 
+ shots = 
+ times = 
+ runid = 
+ run_tag = 
+ /
+ &REMOTE_SETUP
+ serverPicker = 'edison'
+ workDir = 
+ server = 
+ tunnel = 
+ /
+ &MODULE
+ ID = 'COGENT'
+ edited_by = 'creyn'
+ date = '12/02/2015 07:42'
+ version = ''
+ /
+ &DEPENDENCIES
+ EFIT_GUI = "OMFIT['EFIT']['GUIS']['EFITgui']"
+ /

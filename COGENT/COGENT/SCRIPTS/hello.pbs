@@ -1,0 +1,15 @@
+#PBS -j oe  
+#PBS -l mppwidth=24 
+#PBS -l walltime=00:10:00 
+#PBS -N my_job 
+#PBS -o /global/homes/c/creyn/code/test/
+#PBS -q debug 
+#PBS -w /global/homes/c/creyn/code/test/
+
+cd $PBS_O_WORKDIR  
+echo "running $0"
+echo "cwd is" `pwd`
+echo "calling aprun"
+aprun -n 24 /global/homes/c/creyn/code/test/helloWorld
+echo "called aprun"
+echo "end $0"

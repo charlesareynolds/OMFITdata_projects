@@ -1,0 +1,36 @@
+OMFIT COGENT HELP (You can edit this file.)
+=================
+
+COGENT workflow summary:
+
+- SNAP file              -> EFIT       -> geqdisk file
+- geqdisk_file           -> Hypnotoad  -> grid file,                            
+                                          coeff file
+- grid file,
+  coeff file             -> post-
+                            processing -> nodal grid file,
+                                          nodal coeff file
+- nodal grid file,
+  nodal coeff file       -> Fix X      -> fixed nodal grid file,
+                                          fixed nodal coeff file
+- fixed nodal grid file,
+  fixed nodal coeff file -> COGENT     -> plot files
+
+- plot files             -> VISIT      -> images
+
+
+You can begin at any step.
+
+The input and otput files are all in COGENT|FILES.
+
+When you set filenames in the GUI use the simple name, e.g. 
+fixed_nodal_grid_1, instead of 
+/tmp/creyn/OMFIT/OMFIT_2015-04-14_10_55_23/file_2015-04-14__15:03:12__581108/fixed_nodal_grid_1.  
+OMFIT adds the first part automatically.
+
+A working copy of the project may be saved between steps with a date-time or 
+otherwise unique name to come back to later.
+
+To save the project after changes do File|Save As... because File|Save does NOT 
+copy files back to your original project directory!
+
