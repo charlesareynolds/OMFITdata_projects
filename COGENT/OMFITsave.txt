@@ -27,7 +27,7 @@
 ['COGENT']['FILES']['fixed_nodal_grid'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/fixed_nodal_grid_1 <-:-:-> {}
 ['COGENT']['FILES']['plot_files_dir'] <-:-:-> OMFITdir <-:-:-> ./COGENT/FILES/COGENT_PLOTS <-:-:-> {}
 ['COGENT']['FILES']['help'] <-:-:-> OMFITascii <-:-:-> ./COGENT/FILES/help.txt <-:-:-> {}
-['COGENT']['FILES']['hypnotoad_state'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/hypnotoad.idl <-:-:-> {}
+['COGENT']['FILES']['hypnotoad_state'] <-:-:-> OMFITidlSav <-:-:-> ./COGENT/FILES/hypnotoad.idl <-:-:-> {}
 ['EFIT'] <-:-:-> OMFITmodule <-:-:->  <-:-:-> 
 ['EFIT']['FILES'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
 ['EFIT']['SCRIPTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
@@ -82,56 +82,6 @@
 ['EFIT']['SETTINGS']['REMOTE_SETUP']['server'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['server']" <-:-:-> 
 ['EFIT']['SETTINGS']['REMOTE_SETUP']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['tunnel']" <-:-:-> 
 ['EFIT']['help'] <-:-:-> OMFITascii <-:-:-> ./EFIT/help.txt <-:-:-> {}
-['IPSworkflow'] <-:-:-> OMFITmodule <-:-:->  <-:-:-> 
-['IPSworkflow']['IPScore'] <-:-:-> OMFITmodule <-:-:->  <-:-:-> 
-['IPSworkflow']['IPScore']['MACHINES'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
-['IPSworkflow']['IPScore']['MACHINES']['venus'] <-:-:-> OMFITini <-:-:-> ./IPSworkflow/IPScore/MACHINES/venus.conf <-:-:-> {}
-['IPSworkflow']['IPScore']['MACHINES']['hopper'] <-:-:-> OMFITini <-:-:-> ./IPSworkflow/IPScore/MACHINES/hopper.conf <-:-:-> {}
-['IPSworkflow']['IPScore']['SCRIPTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
-['IPSworkflow']['IPScore']['SCRIPTS']['build_config'] <-:-:-> OMFITpythonTask <-:-:-> ./IPSworkflow/IPScore/SCRIPTS/build_config.py <-:-:-> {}
-['IPSworkflow']['IPScore']['SCRIPTS']['launch_job'] <-:-:-> OMFITpythonTask <-:-:-> ./IPSworkflow/IPScore/SCRIPTS/launch_job.py <-:-:-> {}
-['IPSworkflow']['IPScore']['SCRIPTS']['fetch_outputs'] <-:-:-> OMFITpythonTask <-:-:-> ./IPSworkflow/IPScore/SCRIPTS/fetch_outputs.py <-:-:-> {}
-['IPSworkflow']['IPScore']['GUIS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
-['IPSworkflow']['IPScore']['GUIS']['IPScoreGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./IPSworkflow/IPScore/GUIS/IPScoreGUI.py <-:-:-> {}
-['IPSworkflow']['IPScore']['GUIS']['IPScomponentsGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./IPSworkflow/IPScore/GUIS/IPScomponentsGUI.py <-:-:-> {}
-['IPSworkflow']['IPScore']['WEB_MONITOR'] <-:-:-> OMFITexpression <-:-:-> _"OMFITwebLink('swim.gat.com/showmyruns/?username='+MainSettings['SETUP']['user'])" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS'] <-:-:-> OMFITnamelist <-:-:-> ./IPSworkflow/IPScore/SettingsNamelist.txt <-:-:-> {}
-['IPSworkflow']['IPScore']['SETTINGS']['SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,'')" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['shot'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['shot']" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['time'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['time']" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['device'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['device']" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['shots'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['shots']" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['times'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['times']" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['runid'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['runid']" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS']['EXPERIMENT']['run_tag'] <-:-:-> OMFITexpression <-:-:-> _"OMFITmodules[-2]['SETTINGS']['EXPERIMENT']['run_tag']" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS']['REMOTE_SETUP']['serverPicker'] <-:-:-> OMFITexpression <-:-:-> _"\nif OMFITmodules[-2] is OMFIT:\n    return_variable='default'\nelse:\n    return_variable=OMFITmodules[-2]['SETTINGS']['REMOTE_SETUP']['serverPicker']\n" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS']['REMOTE_SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,parent['serverPicker'])" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS']['REMOTE_SETUP']['server'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['server']" <-:-:-> 
-['IPSworkflow']['IPScore']['SETTINGS']['REMOTE_SETUP']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['tunnel']" <-:-:-> 
-['IPSworkflow']['INPUTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
-['IPSworkflow']['OUTPUTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
-['IPSworkflow']['SCRIPTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
-['IPSworkflow']['SCRIPTS']['buildFromExistingRun'] <-:-:-> OMFITpythonTask <-:-:-> ./IPSworkflow/SCRIPTS/buildFromExistingRun.py <-:-:-> {}
-['IPSworkflow']['SCRIPTS']['reload_scripts'] <-:-:-> OMFITpythonTask <-:-:-> ./IPSworkflow/SCRIPTS/reload_scripts.py <-:-:-> {}
-['IPSworkflow']['PLOTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
-['IPSworkflow']['GUIS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
-['IPSworkflow']['GUIS']['workflowGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./IPSworkflow/GUIS/workflowGUI.py <-:-:-> {}
-['IPSworkflow']['GUIS']['buildFromExistingRunGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./IPSworkflow/GUIS/buildFromExistingRunGUI.py <-:-:-> {}
-['IPSworkflow']['COMPONENTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
-['IPSworkflow']['SETTINGS'] <-:-:-> OMFITnamelist <-:-:-> ./IPSworkflow/SettingsNamelist.txt <-:-:-> {}
-['IPSworkflow']['SETTINGS']['SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,'')" <-:-:-> 
-['IPSworkflow']['SETTINGS']['EXPERIMENT']['shot'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['shot']" <-:-:-> 
-['IPSworkflow']['SETTINGS']['EXPERIMENT']['time'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['time']" <-:-:-> 
-['IPSworkflow']['SETTINGS']['EXPERIMENT']['device'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['device']" <-:-:-> 
-['IPSworkflow']['SETTINGS']['EXPERIMENT']['shots'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['shots']" <-:-:-> 
-['IPSworkflow']['SETTINGS']['EXPERIMENT']['times'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['times']" <-:-:-> 
-['IPSworkflow']['SETTINGS']['EXPERIMENT']['runid'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['runid']" <-:-:-> 
-['IPSworkflow']['SETTINGS']['EXPERIMENT']['run_tag'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['EXPERIMENT']['run_tag']" <-:-:-> 
-['IPSworkflow']['SETTINGS']['REMOTE_SETUP']['serverPicker'] <-:-:-> OMFITexpression <-:-:-> _"\nif OMFITmodules[-2] is OMFIT:\n    return_variable='default'\nelse:\n    return_variable=OMFITmodules[-2]['SETTINGS']['REMOTE_SETUP']['serverPicker']\n" <-:-:-> 
-['IPSworkflow']['SETTINGS']['REMOTE_SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITworkDir(root,parent['serverPicker'])" <-:-:-> 
-['IPSworkflow']['SETTINGS']['REMOTE_SETUP']['server'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['server']" <-:-:-> 
-['IPSworkflow']['SETTINGS']['REMOTE_SETUP']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"SERVER[parent['serverPicker']]['tunnel']" <-:-:-> 
-['IPSworkflow']['help'] <-:-:-> OMFITascii <-:-:-> ./IPSworkflow/help.txt <-:-:-> {}
 ['MainSettings'] <-:-:-> OMFITmainSettings <-:-:-> ./MainSettingsNamelist.txt <-:-:-> {}
 ['MainSettings']['SETUP']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITcwd+os.sep+'runs'+os.sep" <-:-:-> 
 ['MainSettings']['SETUP']['modulesDir'] <-:-:-> OMFITexpression <-:-:-> _"OMFITsrc+'/../modules/'" <-:-:-> 
@@ -183,4 +133,4 @@
 ['MainSettings']['SERVER']['saturn']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@saturn.gat.com:22"' <-:-:-> 
 ['MainSettings']['SERVER']['saturn']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
 ['MainSettings']['SERVER']['transpgrid']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
-['__GUISAVE__'] <-:-:-> pickle <-:-:-> ./OMFITpickled_5919123214569735840 <-:-:-> 
+['__GUISAVE__'] <-:-:-> pickle <-:-:-> ./OMFITpickled_7792824787660279919 <-:-:-> 

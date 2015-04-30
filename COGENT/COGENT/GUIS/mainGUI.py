@@ -132,7 +132,7 @@ def create_Hypnotoad_section():
     add_geq_file_entry("in")
     OMFITx.Button('Run Hypnotoad', run_Hypnotoad, bg=button_color)
     add_coeff_file_entry("out")
-    add_grid_file_entry("out")
+    add_IDL_state_file_entry("out")
     OMFITx.Separator()    
 
 def create_Grid_post_processing_section():
@@ -143,7 +143,7 @@ def create_Grid_post_processing_section():
 
     OMFITx.Separator()
     add_coeff_file_entry("in")
-    add_grid_file_entry("in")
+    add_IDL_state_file_entry("in")
     OMFITx.Button('Run grid post-processing', run_grid_post_processing, bg=button_color)
     add_nodal_coeff_file_entry("out")
     add_nodal_grid_file_entry("out")

@@ -3,6 +3,7 @@
  /
  &HYPNOTOAD
  workDir = '/global/homes/c/creyn/code/Hypnotoad'
+ sourceDir = '/global/homes/c/creyn/code/Hypnotoad'
  /
  &SETUP
  /
