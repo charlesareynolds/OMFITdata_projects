@@ -2,8 +2,8 @@
  executable = '/global/project/projectdirs/atom/atom-install-edison/cogent/COGENT/exec/cogent.Linux.64.CC.ftn.OPT.MPI.ex'
  /
  &HYPNOTOAD
- workDir = '/global/homes/c/creyn/code/Hypnotoad'
- sourceDir = '/global/homes/c/creyn/code/Hypnotoad'
+ workDir = '/global/u1/d/dorr/Hypnotoad'
+ sourceDir = '/global/u1/d/dorr/Hypnotoad'
  /
  &SETUP
  /

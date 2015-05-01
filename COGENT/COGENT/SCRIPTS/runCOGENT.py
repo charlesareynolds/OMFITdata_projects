@@ -27,7 +27,7 @@ def move_from_other_working(work_path, other_work_dir):
 
 # Copy the parm file etc. to a batch-accessible directory and add its batch location:
 # NOTE: watch for multiple runs, users, etc.
-server_dir = '/global/homes/c/creyn/code/test'
+server_dir = '/global/u1/d/dorr/tmp'
 # Below commented out because I don't have permission to write to /scratch1/creyn
 #server_dir = root['SETTINGS']['REMOTE_SETUP']['workDir']
 
@@ -36,7 +36,7 @@ parm_file_basename = os.path.basename (parm_file_path)
 parm_file_server_path = server_dir + os.sep + parm_file_basename
 copy_to_other_working(parm_file_path, parm_file_server_path)
 
-coeff_file_path = str(root['FILES']['nodal_COGENT_coefficients'])
+coeff_file_path = str(root['FILES']['nodal_COGENT_Coefficients'])
 coeff_file_basename = os.path.basename (coeff_file_path)
 coeff_file_server_path = server_dir + os.sep + coeff_file_basename
 copy_to_other_working(coeff_file_path, coeff_file_server_path)
@@ -60,6 +60,7 @@ arguments += ', COGENT_GRID_FILE=' + grid_file_server_path
 # available to batch nodes.  /global is, and /scratch1 is on edison.
 #arguments += ' -v COGENT_PARM_FILE=' + str(root['FILES']['COGENT_parms'])
 
+print(arguments)
 OMFITx.execute(
     command_line='qsub',
     interactive_input=None,

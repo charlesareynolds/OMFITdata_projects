@@ -10,6 +10,6 @@ cd $PBS_O_WORKDIR
 echo "running $0"
 echo "cwd is" `pwd`
 echo "calling aprun"
-aprun -n 24 /global/project/projectdirs/atom/atom-install-edison/cogent/COGENT/exec/cogent.Linux.64.CC.ftn.OPT.MPI.ex $COGENT_PARM_FILE $COGENT_COEFF_FILE $COGENT_GRID_FILE
+aprun -n 24 /global/project/projectdirs/atom/atom-install-edison/cogent/COGENT/exec/cogent.Linux.64.CC.ftn.OPT.MPI.ex $COGENT_PARM_FILE
 echo "called aprun"
 echo "end $0"
