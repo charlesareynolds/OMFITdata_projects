@@ -35,7 +35,6 @@ def remove_from_other_work_dir(work_path, other_work_dir):
 
 idl_work_dir = root['SETTINGS']['HYPNOTOAD']['workDir']
 copy_to_other_work_dir(root['FILES']['hypnotoad_state'], idl_work_dir)
-copy_to_other_work_dir(root['FILES']['COGENT_Coefficients'], idl_work_dir)
 
 idl_statement = 'cogent_grid'
 arguments=' -e ' + idl_statement,
@@ -59,7 +58,6 @@ OMFITx.execute(
 move_from_other_work_dir(root['FILES']['nodal_COGENT_Coefficients'], idl_work_dir)
 move_from_other_work_dir(root['FILES']['nodal_grid'], idl_work_dir)
 remove_from_other_work_dir(root['FILES']['hypnotoad_state'], idl_work_dir)
-remove_from_other_work_dir(root['FILES']['COGENT_Coefficients'], idl_work_dir)
 
 
 print ('DONE running run_cogent_grid.py')

@@ -55,7 +55,6 @@ OMFITx.execute(
 # Have to do each file separately because every working OMFIT file lives in 
 # its own directory:
 move_from_other_work_dir(root['FILES']['hypnotoad_state'], idl_work_dir)
-move_from_other_work_dir(root['FILES']['COGENT_Coefficients'], idl_work_dir)
 remove_from_other_work_dir(root['FILES']['G-EQDSK'], idl_work_dir)
 
 print ('DONE running runHypnoToad.py')

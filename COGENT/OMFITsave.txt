@@ -11,9 +11,9 @@
 ['COGENT']['PLOTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
 ['COGENT']['GUIS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
 ['COGENT']['GUIS']['mainGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./COGENT/GUIS/mainGUI.py <-:-:-> {}
-['COGENT']['GUIS']['mainGUI_filepicker'] <-:-:-> OMFITpythonGUI <-:-:-> ./COGENT/GUIS/mainGUI.py_2_2307419014878564856/mainGUI.py <-:-:-> {}
-['COGENT']['GUIS']['mainGUItabbed'] <-:-:-> OMFITpythonGUI <-:-:-> ./COGENT/GUIS/mainGUI.py_3_2307419014878564857/mainGUI.py <-:-:-> {}
 ['COGENT']['SETTINGS'] <-:-:-> OMFITnamelist <-:-:-> ./COGENT/SettingsNamelist.txt <-:-:-> {}
+['COGENT']['SETTINGS']['HYPNOTOAD']['workDir'] <-:-:-> OMFITexpression <-:-:-> _u"server_name = str(root['SETTINGS']['REMOTE_SETUP']['serverPicker'])\nuser_name = str(MainSettings['SERVER'][server_name]['username'])\nreturn_variable = '/global/project/projectdirs/atom/users/' + user_name + '/Hypnotoad'" <-:-:-> 
+['COGENT']['SETTINGS']['HYPNOTOAD']['sourceDir'] <-:-:-> OMFITexpression <-:-:-> _u"server_name = str(root['SETTINGS']['REMOTE_SETUP']['serverPicker'])\nuser_name = str(MainSettings['SERVER'][server_name]['username'])\nreturn_variable = '/global/project/projectdirs/atom/users/' + user_name + '/Hypnotoad'" <-:-:-> 
 ['COGENT']['MACHINES'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
 ['COGENT']['MACHINES']['edison'] <-:-:-> OMFITini <-:-:-> ./COGENT/MACHINES/edison.conf <-:-:-> {}
 ['COGENT']['MACHINES']['edison']['job_status'] <-:-:-> OMFITexpression <-:-:-> _"OMFITwebLink('https:////my.nersc.gov/queues.php?machine=edison&full_name=Edison')" <-:-:-> 
@@ -134,4 +134,4 @@
 ['MainSettings']['SERVER']['saturn']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@saturn.gat.com:22"' <-:-:-> 
 ['MainSettings']['SERVER']['saturn']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
 ['MainSettings']['SERVER']['transpgrid']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
-['__GUISAVE__'] <-:-:-> pickle <-:-:-> ./OMFITpickled_4828617501797882933 <-:-:-> 
+['__GUISAVE__'] <-:-:-> pickle <-:-:-> ./OMFITpickled_-5704371953221598260 <-:-:-> 
