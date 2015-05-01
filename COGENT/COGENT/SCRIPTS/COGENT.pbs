@@ -6,7 +6,7 @@
 #PBS -q debug 
 #PBS -w /global/homes/c/creyn/code/test/
 
-cd $PBS_O_WORKDIR  
+cd $COGENT_WORK_DIR  
 echo "running $0"
 echo "cwd is" `pwd`
 echo "calling aprun"

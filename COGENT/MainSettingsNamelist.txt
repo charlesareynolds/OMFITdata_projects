@@ -1,11 +1,11 @@
  &SETUP
  institution = 'NERSC'
- email = 
+ email = 'reynolds12@llnl.gov'
  workDir = 
  modulesDir = 
  projectsDir = 
  stats_file = '/global/project/projectdirs/atom/atom-install-edison/stats/OMFITstats.txt'
- editor = 'emacs %s'
+ editor = 'gedit %s'
  browser = '/usr/bin/firefox'
  error_report = .True.
  report_to = 'meneghini@fusion.gat.com' 'smithsp@fusion.gat.com'
@@ -141,6 +141,7 @@
   workDir = 
   server = 
   tunnel = 
+  username = 
   /
   &tscc
   workDir = 

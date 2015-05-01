@@ -7,6 +7,7 @@
 ['COGENT']['SCRIPTS']['HelloPBS'] <-:-:-> OMFITascii <-:-:-> ./COGENT/SCRIPTS/hello.pbs <-:-:-> {}
 ['COGENT']['SCRIPTS']['COGENTPBS'] <-:-:-> OMFITascii <-:-:-> ./COGENT/SCRIPTS/COGENT.pbs <-:-:-> {}
 ['COGENT']['SCRIPTS']['test_mod_orig'] <-:-:-> OMFITpythonTask <-:-:-> ./COGENT/SCRIPTS/TMO.py <-:-:-> {}
+['COGENT']['SCRIPTS']['run_fix_x'] <-:-:-> OMFITpythonTask <-:-:-> ./COGENT/SCRIPTS/run_fix_x.py <-:-:-> {}
 ['COGENT']['PLOTS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
 ['COGENT']['GUIS'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
 ['COGENT']['GUIS']['mainGUI'] <-:-:-> OMFITpythonGUI <-:-:-> ./COGENT/GUIS/mainGUI.py <-:-:-> {}
@@ -20,7 +21,6 @@
 ['COGENT']['MACHINES']['dummy'] <-:-:-> OMFITini <-:-:-> ./COGENT/MACHINES/dummy.ini <-:-:-> {}
 ['COGENT']['FILES'] <-:-:-> OMFITtree <-:-:->  <-:-:-> 
 ['COGENT']['FILES']['G-EQDSK'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/g153523.03745 <-:-:-> {}
-['COGENT']['FILES']['COGENT_Coefficients'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/coefficients1 <-:-:-> {}
 ['COGENT']['FILES']['nodal_COGENT_Coefficients'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/DCT_coefficients.txt <-:-:-> {}
 ['COGENT']['FILES']['nodal_grid'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/COGENT_mapping.txt <-:-:-> {}
 ['COGENT']['FILES']['fixed_nodal_grid'] <-:-:-> OMFITpath <-:-:-> ./COGENT/FILES/fixed_nodal_grid.txt <-:-:-> {}
@@ -111,9 +111,10 @@
 ['MainSettings']['SERVER']['hopper']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/scratch/scratchdirs/'+username+'/OMFIT/runs/'" <-:-:-> 
 ['MainSettings']['SERVER']['hopper']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'NERSC_username\']+"@hopper.nersc.gov:22"' <-:-:-> 
 ['MainSettings']['SERVER']['hopper']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"''" <-:-:-> 
-['MainSettings']['SERVER']['edison']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/scratch1/scratchdirs/'+username+'/OMFIT/runs/'" <-:-:-> 
+['MainSettings']['SERVER']['edison']['workDir'] <-:-:-> OMFITexpression <-:-:-> _u"parentBaseName = parseBuildLocation(parentName)[-1]\nserverName = parentBaseName\nuserName = SERVER[serverName]['username']\nreturn_variable = '/global/project/projectdirs/atom/users/' + userName + '/tmp'" <-:-:-> 
 ['MainSettings']['SERVER']['edison']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'NERSC_username\']+"@edison.nersc.gov:22"' <-:-:-> 
 ['MainSettings']['SERVER']['edison']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"''" <-:-:-> 
+['MainSettings']['SERVER']['edison']['username'] <-:-:-> OMFITexpression <-:-:-> _"MainSettings['SERVER']['NERSC_username']" <-:-:-> 
 ['MainSettings']['SERVER']['tscc']['workDir'] <-:-:-> OMFITexpression <-:-:-> _"username=SERVER[parseBuildLocation(parentName)[-1]]['server'].split('@')[0]\nreturn_variable='/tmp/'+username+'/OMFIT/runs/'" <-:-:-> 
 ['MainSettings']['SERVER']['tscc']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'UCSD_username\']+"@tscc-login.sdsc.edu:22"' <-:-:-> 
 ['MainSettings']['SERVER']['tscc']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _"''" <-:-:-> 
@@ -133,4 +134,4 @@
 ['MainSettings']['SERVER']['saturn']['server'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@saturn.gat.com:22"' <-:-:-> 
 ['MainSettings']['SERVER']['saturn']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
 ['MainSettings']['SERVER']['transpgrid']['tunnel'] <-:-:-> OMFITexpression <-:-:-> _'MainSettings[\'SERVER\'][\'GA_username\']+"@cybele.gat.com:2039"' <-:-:-> 
-['__GUISAVE__'] <-:-:-> pickle <-:-:-> ./OMFITpickled_-6289996451500840692 <-:-:-> 
+['__GUISAVE__'] <-:-:-> pickle <-:-:-> ./OMFITpickled_4828617501797882933 <-:-:-> 
