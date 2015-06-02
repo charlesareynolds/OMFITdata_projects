@@ -1,9 +1,10 @@
- &PHYSICS
+ &COGENT
+ executable = '/global/project/projectdirs/atom/atom-install-edison/cogent/COGENT/exec/cogent.Linux.64.CC.ftn.OPT.MPI.ex'
+ /
+ &HYPNOTOAD
+ workDir = '/global/homes/c/creyn/code/Hypnotoad'
  /
  &SETUP
- workDir = 
- executable = '/global/project/projectdirs/atom/atom-install-edison/cogent/COGENT/exec/cogent.Linux.64.CC.ftn.OPT.MPI.ex'
- hypnotoad_location = '/global/homes/c/creyn/code/Hypnotoad'
  /
  &EXPERIMENT
  shot = 
@@ -23,7 +24,7 @@
  &MODULE
  ID = 'COGENT'
  edited_by = 'creyn'
- date = '12/02/2015 07:42'
+ date = '2015/04/17 14:18'
  version = ''
  /
  &DEPENDENCIES

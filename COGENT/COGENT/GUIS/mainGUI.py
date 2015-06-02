@@ -62,10 +62,10 @@ def add_nodal_coeff_file_entry(in_out):
         usage='Output from grid post-processing, input to Fix_X, input to COGENT')
 
 # Grid/mesh files
-def add_grid_file_entry(in_out):
+def add_IDL_state_file_entry(in_out):
     show_path(
-        r_f_location="['grid']",
-        description='Grid file', 
+        r_f_location="['hypnotoad_state']",
+        description='hypnotoad state file', 
         in_out=in_out,
         usage='Output from Hypnotoad, input to grid post-processing')
 def add_nodal_grid_file_entry(in_out):
