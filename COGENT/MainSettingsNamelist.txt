@@ -141,6 +141,7 @@
   workDir = 
   server = 
   tunnel = 
+  username = 
   /
   &tscc
   workDir = 

@@ -48,12 +48,6 @@ def add_geq_file_entry(in_out):
         usage='Output from EFIT, input to Hypnotoad')
 
 # Coefficient files
-def add_coeff_file_entry(in_out):
-    show_path(
-        r_f_location="['COGENT_Coefficients']",
-        description='Coefficient file', 
-        in_out=in_out,
-        usage='Output from Hypnotoad, input to grid post-processing')
 def add_nodal_coeff_file_entry(in_out):
     show_path(
         r_f_location="['nodal_COGENT_Coefficients']",
@@ -126,24 +120,22 @@ def create_Hypnotoad_section():
     def run_Hypnotoad():
         print ('Running Hypnotoad')
         root['SCRIPTS']['runHypnotoad'].run()
-        print ('Done running Hypnotoad')
+        print ('DONE Running Hypnotoad')
 
     OMFITx.Separator()
     add_geq_file_entry("in")
     OMFITx.Button('Run Hypnotoad', run_Hypnotoad, bg=button_color)
-    add_coeff_file_entry("out")
-    add_grid_file_entry("out")
+    add_IDL_state_file_entry("out")
     OMFITx.Separator()    
 
 def create_Grid_post_processing_section():
     def run_grid_post_processing():
         print ('Running grid post-processing')
         root['SCRIPTS']['run_cogent_grid'].run()
-        print ('Done running grid post-processing')
+        print ('DONE Running grid post-processing')
 
     OMFITx.Separator()
-    add_coeff_file_entry("in")
-    add_grid_file_entry("in")
+    add_IDL_state_file_entry("in")
     OMFITx.Button('Run grid post-processing', run_grid_post_processing, bg=button_color)
     add_nodal_coeff_file_entry("out")
     add_nodal_grid_file_entry("out")
@@ -151,7 +143,9 @@ def create_Grid_post_processing_section():
 
 def create_Fix_X_section():
     def run_Fix_X():
-        print ('Pretending to run Fix_X')
+        print ('Running Fix X')
+        root['SCRIPTS']['run_fix_x'].run()
+        print ('DONE Running Fix X')
 
     OMFITx.Separator()
     add_nodal_coeff_file_entry("in")
@@ -162,9 +156,9 @@ def create_Fix_X_section():
     
 def create_COGENT_section():
     def submit():
-        print('Submitting job...')
+        print('Submitting COGENT job')
         root['SCRIPTS']['runCOGENT'].run()
-        print('Submitted job.')
+        print('DONE Submitting COGENT job')
         
     OMFITx.Separator()
     add_nodal_coeff_file_entry("in")
